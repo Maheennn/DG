@@ -8,13 +8,20 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
+ <nav>
+  <div class="logo">MySite</div>
+  <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('active')">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="menu">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#slides">Slides</a>
-    <a href="cards.html">Cards</a>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Home Section -->
   <section id="home" class="home">
