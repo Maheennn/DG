@@ -1,97 +1,102 @@
-/* Reset default styles */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Body Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
+  padding-top: 60px;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #2c3e50;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-nav a {
-  color: #fff;
+nav .logo {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+nav .menu {
+  display: flex;
+  gap: 20px;
+}
+nav .menu a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  margin: 8px 12px;
-  padding: 8px 10px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  transition: color 0.3s;
+}
+nav .menu a:hover {
+  color: #3498db;
 }
 
-nav a:hover {
-  background-color: #3498db;
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
 }
 
 /* Sections */
 section {
-  padding: 100px 20px 60px;
+  padding: 80px 20px;
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Home Section */
 .home {
   background: linear-gradient(to right, #4facfe, #00f2fe);
   color: white;
   text-align: center;
 }
-
 .home h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
-
 .home p {
   font-size: 1.5rem;
   max-width: 800px;
   margin: 0 auto;
 }
 
-/* About Section */
 .about {
-  background-color: #fff;
+  background-color: white;
   text-align: center;
 }
-
 .about h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-
 .about p {
   font-size: 1.2rem;
   max-width: 800px;
-  margin: 10px auto;
+  margin: 0 auto;
   line-height: 1.8;
 }
 
-/* Slides Section */
 .slides {
   background-color: #ecf0f1;
 }
-
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .slide {
   background: white;
   margin-bottom: 40px;
@@ -99,60 +104,50 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .slide h3 {
   font-size: 2rem;
-  margin-bottom: 15px;
   color: #34495e;
   text-align: center;
 }
-
 .slide p {
   font-size: 1.1rem;
   color: #555;
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
-
-/* FULL IMAGES */
 .slide img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
   display: block;
-  margin: 0 auto;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  nav {
+  nav .menu {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    padding: 10px;
+    background: #2c3e50;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding-bottom: 10px;
   }
-
-  nav a {
-    margin: 6px 0;
-    font-size: 1rem;
+  nav .menu.active {
+    display: flex;
   }
-
+  .hamburger {
+    display: flex;
+  }
   .home h1 {
     font-size: 2rem;
   }
-
-  .home p {
-    font-size: 1.1rem;
-  }
-
-  .about h2 {
-    font-size: 2rem;
-  }
-
-  .about p,
-  .slide p {
+  .home p, .about p {
     font-size: 1rem;
   }
-
   .slide h3 {
     font-size: 1.5rem;
   }
