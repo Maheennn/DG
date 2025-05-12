@@ -20,7 +20,7 @@ nav {
   padding: 10px 0; /* vertical padding for navbar */
   display: flex;
   justify-content: center;
-  gap: 20px; /* space between links */
+  gap: 20; /* space between links */
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -29,7 +29,7 @@ nav a {
   text-decoration: none;
   color: white; /* makes the text white */
   font-weight: bold;
-  padding: 10px 15px; /* space inside each link */
+  padding: 12px 16px; /* space inside each link */
   transition: color 0.3s ease;
 }
 
