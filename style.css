@@ -133,6 +133,11 @@ section {
     font-size: 0.95rem;
   }
 
+  nav a {
+  padding: 10px 15px; /* top-bottom: 10px, left-right: 15px */
+}
+
+
   .home h1 {
     font-size: 2rem;
   }
